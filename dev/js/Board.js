@@ -8,7 +8,7 @@ var Board = React.createClass({
                 count: function(props, propName) {
                     if(typeof props[propName] !== "number") {
                         return new Error("the count must be a number")
-                    } 
+                    }
 
                     if(props[propName] > 100) {
                         return new Error('Creating ' + props[propName] + ' notes is ridiculous')
@@ -22,7 +22,7 @@ var Board = React.createClass({
             },
             componentWillMount() {
                 if (this.props.count) {
-                    var url = `http://baconipsum.com/api/?type=all-meat&sentences=${this.props.count}`
+                    var url = `https://baconipsum.com/api/?type=all-meat&sentences=${this.props.count}`
                     fetch(url)
                           .then(results => results.json())
                           .then(array => array[0])
@@ -51,9 +51,9 @@ var Board = React.createClass({
             update(newText, id) {
                 var notes = this.state.notes.map(
                     note => (note.id !== id) ?
-                       note : 
+                       note :
                         {
-                            ...note, 
+                            ...note,
                             note: newText
                         }
                     )
