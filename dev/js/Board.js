@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import '../scss/App.scss'
 import Note from './Note'
 import * as Firebase from 'firebase';
 
@@ -74,7 +74,7 @@ var Board = React.createClass({
             render() {
                 return (<div className='board'>
                            {this.state.notes.map(this.eachNote)}
-                           <button onClick={() => this.add('New Note')}>+</button>
+                           <button className="add-btn" onClick={() => this.add('New Note')}>+</button>
                         </div>)
             }
         })

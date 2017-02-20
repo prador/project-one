@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import '../scss/App.scss'
 import Draggable from 'react-draggable'
 import Textarea from 'react-textarea-autosize'
 import * as Firebase from 'firebase';
@@ -8,19 +8,19 @@ var Note = React.createClass({
             getInitialState() {
                 return {editing: false}
             },
-            componentWillMount() {
-                let config = {
-                    apiKey: "AIzaSyB1a56Oa2pSOLD7dQMJCfcZLVCJG116CIo",
-                    authDomain: "noteworthy-c9f08.firebaseapp.com",
-                    databaseURL: "https://noteworthy-c9f08.firebaseio.com",
-                    storageBucket: "noteworthy-c9f08.appspot.com",
-                    messagingSenderId: "589521000105"
-                };
-                const database = firebase  
-                                .initializeApp(config)
-                                .database()
-                                .ref();
-            },
+            // componentWillMount() {
+            //     let config = {
+            //         apiKey: "AIzaSyB1a56Oa2pSOLD7dQMJCfcZLVCJG116CIo",
+            //         authDomain: "noteworthy-c9f08.firebaseapp.com",
+            //         databaseURL: "https://noteworthy-c9f08.firebaseio.com",
+            //         storageBucket: "noteworthy-c9f08.appspot.com",
+            //         messagingSenderId: "589521000105"
+            //     };
+            //     const database = firebase  
+            //                     .initializeApp(config)
+            //                     .database()
+            //                     .ref();
+            // },
             componentDidUpdate() {
                 if (this.state.editing) {
                     this.refs.newText.focus()
