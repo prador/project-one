@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Cherry+Swash');
+$white: #fff;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://c1.staticflickr.com/1/409/32007140690_29ed2296f2_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  #navbar-container {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Cherry Swash";
+    font-weight: bolder;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0px;
+      margin-top: 1rem;
+    }
+  }
+  #react-container {
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: flex-start;
+      padding: 4rem 5rem;
+      height: 80vh;
+      .note {
+        min-height: auto;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.30);
+        margin: 5px;
+        padding: 15px;
+        color: $white;
+        cursor: -webkit-grab;
+        &:active {
+          cursor: -webkit-grabbing;
+        }
+        &:hover {
+          button {
+            opacity: 1;
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 22px;
+          padding: 10px 5px;
+          font-family: "Roboto Thin", Arial;
+        }
+        button {
+          position: absolute;
+          border: none;
+          background-color: transparent;
+          opacity: 0;
+          font-size: 18px;
+          color:$white;
+          transition: opacity .25s linear;
+          &.save-btn {
+            top: 2px;
+            right: 2px;
+          }
+          &.edit-btn {
+            top: 2px;
+            right: 25px;
+          }
+          &.del-btn {
+            top: 2px;
+            right: 2px;
+          }
+        }
+        textarea {
+          background: transparent;
+          color: #fff;
+          height: 100%;
+          width: 100%;
+          border: none;
+          padding: 10px 5px;
+          outline: none;
+          resize: none;
+          font-family: "Roboto Thin";
+          font-size: 22px;
+          word-wrap: normal;
+        }
+      }
+      .add-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 2.5em;
+        border-radius: 25px;
+        background-color: #f73a45;
+        border: none;
+        color: $white;
+        padding: 5px 15px;
+        box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+      }
+    }
+  }
+  .background-overlay {
+    background-color: rgba(0, 0, 0, 0.20);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
