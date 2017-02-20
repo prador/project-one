@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Cherry+Swash');
+$white: #fff;
+
+.landing-body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body {
+  margin: 0;
+  padding: 0;
+  #navbar-container {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Cherry Swash";
+    font-weight: bolder;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0px;
+      margin-top: 1rem;
+    }
+  }
+  #landing-container {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    .landing-section {
+      padding: 20% 0;
+      font-size: 20px;
+      font-family: "roboto slab";
+      text-align: center;
+      .landing-btn {
+        border: none;
+        background-color: #ff4444;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    }
+  }
+  .background-overlay {
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
