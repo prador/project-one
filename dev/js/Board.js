@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/App.scss'
+import '../scss/App.scss';
 import Note from './Note'
 import * as Firebase from 'firebase';
 
@@ -22,7 +22,7 @@ var Board = React.createClass({
             },
             componentWillMount() {
                 if (this.props.count) {
-                    var url = `https://baconipsum.com/api/?type=all-meat&sentences=${this.props.count}`
+                    var url = `http://baconipsum.com/api/?type=all-meat&sentences=${this.props.count}`
                     fetch(url)
                           .then(results => results.json())
                           .then(array => array[0])

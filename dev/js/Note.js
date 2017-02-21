@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/App.scss'
+import '../scss/App.scss';
 import Draggable from 'react-draggable'
 import Textarea from 'react-textarea-autosize'
 import * as Firebase from 'firebase';
@@ -16,7 +16,7 @@ var Note = React.createClass({
             //         storageBucket: "noteworthy-c9f08.appspot.com",
             //         messagingSenderId: "589521000105"
             //     };
-            //     const database = firebase  
+            //     const database = firebase
             //                     .initializeApp(config)
             //                     .database()
             //                     .ref();
@@ -71,4 +71,3 @@ var Note = React.createClass({
         })
 
 export default Note
-
