@@ -16,7 +16,7 @@ var Note = React.createClass({
             //         storageBucket: "noteworthy-c9f08.appspot.com",
             //         messagingSenderId: "589521000105"
             //     };
-            //     const database = firebase
+            //     const database = firebase  
             //                     .initializeApp(config)
             //                     .database()
             //                     .ref();
